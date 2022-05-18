@@ -1,5 +1,6 @@
 library(Biostrings)
 library(ape)
+library(seqinr)
 
 homo_sapiens <- read.GenBank("NM_003381.4", as.character = "TRUE")
 pongo_abelii <- read.GenBank("XM_024248829.1", as.character = "TRUE")

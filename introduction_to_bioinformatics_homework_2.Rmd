@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Bioinformatic Homework 2"
+title: "Introduction to Bioinformatics Homework 2"
 author: "Yakup Tarık AÇAN"
 output: html_document
 ---
