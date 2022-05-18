@@ -8,6 +8,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(Biostrings)
 library(ape)
+library(seqinr)
 ```
 
 # 3)
@@ -54,7 +55,6 @@ summary(homo_sapiens_pongo_abeli_global_score)
 summary(homo_sapiens_pongo_abeli_local_score)
 ```
 
-
 ```{r}
 homo_sapiens_equus_caballus_global_score<-pairwiseAlignment(pattern=homo_sapiens_seq, subject=equus_caballus_seq, type="global",scoreOnly=TRUE)
 homo_sapiens_equus_caballus_local_score<-pairwiseAlignment(pattern=homo_sapiens_seq, subject=equus_caballus_seq, type="local",scoreOnly=TRUE)
@@ -62,7 +62,6 @@ homo_sapiens_equus_caballus_local_score<-pairwiseAlignment(pattern=homo_sapiens_
 summary(homo_sapiens_equus_caballus_global_score)
 summary(homo_sapiens_equus_caballus_local_score)
 ```
-
 
 ```{r}
 homo_sapiens_lutra_lutra_global_score<-pairwiseAlignment(pattern=homo_sapiens_seq, subject=lutra_lutra_seq, type="global",scoreOnly=TRUE)
@@ -72,7 +71,6 @@ summary(homo_sapiens_lutra_lutra_global_score)
 summary(homo_sapiens_lutra_lutra_local_score)
 ```
 
-
 ```{r}
 homo_sapiens_cavia_porcellus_global_score<-pairwiseAlignment(pattern=homo_sapiens_seq, subject=cavia_porcellus_seq, type="global",scoreOnly=TRUE)
 homo_sapiens_cavia_porcellus_local_score<-pairwiseAlignment(pattern=homo_sapiens_seq, subject=cavia_porcellus_seq, type="local",scoreOnly=TRUE)
@@ -81,9 +79,45 @@ summary(homo_sapiens_cavia_porcellus_global_score)
 summary(homo_sapiens_cavia_porcellus_local_score)
 ```
 
+## d) 
 
-## d)
+homo sapiens ve pongo abelii ye baktığımızda global eşlemeye göre local eşlemede eşleşme sayısı daha azken skoru daha yüksektir.\
+Genel itibariyle baktığımızda VIP nöronlarının işlevlerinin benzer olduğunu söyleyebiliriz.
 
 ```{r}
-dotPlot(cox1, cox2, wsize = 3, wstep = 3, nmatch = 3, main = "Human vs Mouse Cox1 Dotplot\nwsize = 3, wstep = 3, nmatch = 3")
+summary(homo_sapiens_pongo_abeli_global)
+```
+
+```{r}
+summary(homo_sapiens_pongo_abeli_local)
+```
+
+homo sapiens ve equus caballusun skorlarına ve eşleşme sayılarına baktığımızda VIP nöronlarının işlevlerinin benzer olduğunu söyleyebiliriz.
+
+```{r}
+summary(homo_sapiens_equus_caballus_global)
+```
+
+```{r}
+summary(homo_sapiens_equus_caballus_local)
+```
+
+homo sapiens ve lutra lutranın skorlarına ve eşleşme sayılarına baktığımızda VIP nöronlarının işlevlerinin benzer olduğunu söyleyebiliriz.
+
+```{r}
+summary(homo_sapiens_lutra_lutra_global)
+```
+
+```{r}
+summary(homo_sapiens_lutra_lutra_local)
+```
+
+homo sapiens ve cavia porcellusta eşleme sayılarına ve skorlarına baktığımızda eşleşme sayıları ve skorlar arasında ters orantı olduğunu görebiliyoruz ve bu VIP nöronlarının benzer işlevlerde olmadığına bir işarettir.
+
+```{r}
+summary(homo_sapiens_cavia_porcellus_global)
+```
+
+```{r}
+summary(homo_sapiens_cavia_porcellus_local)
 ```
