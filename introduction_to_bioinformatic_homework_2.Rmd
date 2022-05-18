@@ -82,8 +82,4 @@ summary(homo_sapiens_cavia_porcellus_local_score)
 ```
 
 
-## d)
 
-```{r}
-dotPlot(cox1, cox2, wsize = 3, wstep = 3, nmatch = 3, main = "Human vs Mouse Cox1 Dotplot\nwsize = 3, wstep = 3, nmatch = 3")
-```
