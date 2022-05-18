@@ -404,14 +404,248 @@ homo_sapiens_cavia_porcellus_local&lt;-pairwiseAlignment(pattern=homo_sapiens_se
 <pre class="r"><code>homo_sapiens_pongo_abeli_global_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=pongo_abelii_seq, type=&quot;global&quot;,scoreOnly=TRUE)
 homo_sapiens_pongo_abeli_local_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=pongo_abelii_seq, type=&quot;local&quot;,scoreOnly=TRUE)
 
-homo_sapiens_equus_caballus_global_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=equus_caballus_seq, type=&quot;global&quot;,scoreOnly=TRUE)
+summary(homo_sapiens_pongo_abeli_global_score)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   22944   22944   22944   22944   22944   22944</code></pre>
+<pre class="r"><code>summary(homo_sapiens_pongo_abeli_local_score)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   25118   25118   25118   25118   25118   25118</code></pre>
+<pre class="r"><code>homo_sapiens_equus_caballus_global_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=equus_caballus_seq, type=&quot;global&quot;,scoreOnly=TRUE)
 homo_sapiens_equus_caballus_local_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=equus_caballus_seq, type=&quot;local&quot;,scoreOnly=TRUE)
 
-homo_sapiens_lutra_lutra_global_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=lutra_lutra_seq, type=&quot;global&quot;,scoreOnly=TRUE)
+summary(homo_sapiens_equus_caballus_global_score)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   20435   20435   20435   20435   20435   20435</code></pre>
+<pre class="r"><code>summary(homo_sapiens_equus_caballus_local_score)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   21895   21895   21895   21895   21895   21895</code></pre>
+<pre class="r"><code>homo_sapiens_lutra_lutra_global_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=lutra_lutra_seq, type=&quot;global&quot;,scoreOnly=TRUE)
 homo_sapiens_lutra_lutra_local_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=lutra_lutra_seq, type=&quot;local&quot;,scoreOnly=TRUE)
 
-homo_sapiens_cavia_porcellus_global_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=cavia_porcellus_seq, type=&quot;global&quot;,scoreOnly=TRUE)
-homo_sapiens_cavia_porcellus_local_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=cavia_porcellus_seq, type=&quot;local&quot;,scoreOnly=TRUE)</code></pre>
+summary(homo_sapiens_lutra_lutra_global_score)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   21855   21855   21855   21855   21855   21855</code></pre>
+<pre class="r"><code>summary(homo_sapiens_lutra_lutra_local_score)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   22145   22145   22145   22145   22145   22145</code></pre>
+<pre class="r"><code>homo_sapiens_cavia_porcellus_global_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=cavia_porcellus_seq, type=&quot;global&quot;,scoreOnly=TRUE)
+homo_sapiens_cavia_porcellus_local_score&lt;-pairwiseAlignment(pattern=homo_sapiens_seq, subject=cavia_porcellus_seq, type=&quot;local&quot;,scoreOnly=TRUE)
+
+summary(homo_sapiens_cavia_porcellus_global_score)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   102.4   102.4   102.4   102.4   102.4   102.4</code></pre>
+<pre class="r"><code>summary(homo_sapiens_cavia_porcellus_local_score)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   10407   10407   10407   10407   10407   10407</code></pre>
+</div>
+<div id="d" class="section level2">
+<h2>d)</h2>
+<p>homo sapiens ve pongo abelii ye baktığımızda global eşlemeye göre
+local eşlemede eşleşme sayısı daha azken skoru daha yüksektir.<br />
+Genel itibariyle baktığımızda VIP nöronlarının işlevlerinin benzer
+olduğunu söyleyebiliriz.</p>
+<pre class="r"><code>summary(homo_sapiens_pongo_abeli_global)</code></pre>
+<pre><code>## Global Single Subject Pairwise Alignments
+## Number of Alignments:  1
+## 
+## Scores:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   22944   22944   22944   22944   22944   22944 
+## 
+## Number of matches:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    7841    7841    7841    7841    7841    7841 
+## 
+## Top 10 Mismatch Counts:
+##    SubjectPosition Subject Pattern Count Probability
+## 1             1562       t       c     1           1
+## 2             1592       c       t     1           1
+## 3             1677       c       t     1           1
+## 4             1697       g       a     1           1
+## 5             1727       a       t     1           1
+## 6             2283       c       g     1           1
+## 7             3335       a       t     1           1
+## 8             3786       t       c     1           1
+## 9             3966       c       a     1           1
+## 10            4112       a       c     1           1</code></pre>
+<pre class="r"><code>summary(homo_sapiens_pongo_abeli_local)</code></pre>
+<pre><code>## Local Single Subject Pairwise Alignments
+## Number of Alignments:  1
+## 
+## Scores:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   25118   25118   25118   25118   25118   25118 
+## 
+## Number of matches:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    7838    7838    7838    7838    7838    7838 
+## 
+## Top 10 Mismatch Counts:
+##    SubjectPosition Subject Pattern Count Probability
+## 1             1562       t       c     1           1
+## 2             1592       c       t     1           1
+## 3             1677       c       t     1           1
+## 4             1697       g       a     1           1
+## 5             1727       a       t     1           1
+## 6             2283       c       g     1           1
+## 7             3335       a       t     1           1
+## 8             3786       t       c     1           1
+## 9             3966       c       a     1           1
+## 10            4112       a       c     1           1</code></pre>
+<p>homo sapiens ve equus caballusun skorlarına ve eşleşme sayılarına
+baktığımızda VIP nöronlarının işlevlerinin benzer olduğunu
+söyleyebiliriz.</p>
+<pre class="r"><code>summary(homo_sapiens_equus_caballus_global)</code></pre>
+<pre><code>## Global Single Subject Pairwise Alignments
+## Number of Alignments:  1
+## 
+## Scores:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   20435   20435   20435   20435   20435   20435 
+## 
+## Number of matches:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    7422    7422    7422    7422    7422    7422 
+## 
+## Top 10 Mismatch Counts:
+##    SubjectPosition Subject Pattern Count Probability
+## 1              219       a       g     1           1
+## 2              249       g       c     1           1
+## 3              254       t       c     1           1
+## 4              259       c       a     1           1
+## 5              274       t       a     1           1
+## 6              299       a       g     1           1
+## 7              319       t       c     1           1
+## 8              349       g       a     1           1
+## 9              404       g       t     1           1
+## 10             414       a       g     1           1</code></pre>
+<pre class="r"><code>summary(homo_sapiens_equus_caballus_local)</code></pre>
+<pre><code>## Local Single Subject Pairwise Alignments
+## Number of Alignments:  1
+## 
+## Scores:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   21895   21895   21895   21895   21895   21895 
+## 
+## Number of matches:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    7400    7400    7400    7400    7400    7400 
+## 
+## Top 10 Mismatch Counts:
+##    SubjectPosition Subject Pattern Count Probability
+## 1              254       t       g     1           1
+## 2              259       c       g     1           1
+## 3              264       g       t     1           1
+## 4              269       c       a     1           1
+## 5              274       t       g     1           1
+## 6              279       g       a     1           1
+## 7              289       c       t     1           1
+## 8              294       a       g     1           1
+## 9              304       t       g     1           1
+## 10             319       t       g     1           1</code></pre>
+<p>homo sapiens ve lutra lutranın skorlarına ve eşleşme sayılarına
+baktığımızda VIP nöronlarının işlevlerinin benzer olduğunu
+söyleyebiliriz.</p>
+<pre class="r"><code>summary(homo_sapiens_lutra_lutra_global)</code></pre>
+<pre><code>## Global Single Subject Pairwise Alignments
+## Number of Alignments:  1
+## 
+## Scores:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   21855   21855   21855   21855   21855   21855 
+## 
+## Number of matches:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    7549    7549    7549    7549    7549    7549 
+## 
+## Top 10 Mismatch Counts:
+##    SubjectPosition Subject Pattern Count Probability
+## 1               54       a       g     1           1
+## 2               84       g       c     1           1
+## 3               89       t       c     1           1
+## 4               94       t       a     1           1
+## 5              109       t       a     1           1
+## 6              134       a       g     1           1
+## 7              154       t       c     1           1
+## 8              204       a       t     1           1
+## 9              239       g       t     1           1
+## 10             249       a       g     1           1</code></pre>
+<pre class="r"><code>summary(homo_sapiens_lutra_lutra_local)</code></pre>
+<pre><code>## Local Single Subject Pairwise Alignments
+## Number of Alignments:  1
+## 
+## Scores:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   22145   22145   22145   22145   22145   22145 
+## 
+## Number of matches:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    7530    7530    7530    7530    7530    7530 
+## 
+## Top 10 Mismatch Counts:
+##    SubjectPosition Subject Pattern Count Probability
+## 1               89       t       g     1           1
+## 2               94       t       g     1           1
+## 3               99       g       t     1           1
+## 4              104       c       a     1           1
+## 5              109       t       g     1           1
+## 6              114       g       a     1           1
+## 7              124       c       t     1           1
+## 8              129       a       g     1           1
+## 9              139       t       g     1           1
+## 10             154       t       g     1           1</code></pre>
+<p>homo sapiens ve cavia porcellusta eşleme sayılarına ve skorlarına
+baktığımızda eşleşme sayıları ve skorlar arasında ters orantı olduğunu
+görebiliyoruz ve bu VIP nöronlarının benzer işlevlerde olmadığına bir
+işarettir.</p>
+<pre class="r"><code>summary(homo_sapiens_cavia_porcellus_global)</code></pre>
+<pre><code>## Global Single Subject Pairwise Alignments
+## Number of Alignments:  1
+## 
+## Scores:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   102.4   102.4   102.4   102.4   102.4   102.4 
+## 
+## Number of matches:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    4598    4598    4598    4598    4598    4598 
+## 
+## Top 10 Mismatch Counts:
+##    SubjectPosition Subject Pattern Count Probability
+## 1               14       t       g     1           1
+## 2               19       c       a     1           1
+## 3               24       t       g     1           1
+## 4               49       t       g     1           1
+## 5               54       t       c     1           1
+## 6               59       t       a     1           1
+## 7               64       t       g     1           1
+## 8               74       a       c     1           1
+## 9               94       t       a     1           1
+## 10             109       t       a     1           1</code></pre>
+<pre class="r"><code>summary(homo_sapiens_cavia_porcellus_local)</code></pre>
+<pre><code>## Local Single Subject Pairwise Alignments
+## Number of Alignments:  1
+## 
+## Scores:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   10407   10407   10407   10407   10407   10407 
+## 
+## Number of matches:
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    3853    3853    3853    3853    3853    3853 
+## 
+## Top 10 Mismatch Counts:
+##    SubjectPosition Subject Pattern Count Probability
+## 1              865       c       g     1           1
+## 2              890       c       a     1           1
+## 3              895       a       g     1           1
+## 4              900       g       a     1           1
+## 5              925       a       c     1           1
+## 6              930       t       c     1           1
+## 7              950       t       a     1           1
+## 8              965       t       c     1           1
+## 9              970       t       a     1           1
+## 10            1026       g       c     1           1</code></pre>
 </div>
 </div>
 
